@@ -8,7 +8,7 @@ function App() {
       <Switch>
         <Route path="/hello"><div>Hello</div></Route>
         <Route path="/movie/:id" component={Detail}/>4
-        <Route path="/" component={Home}/>
+        <Route path={`${process.env.PUBLIC_URL}/`} component={Home}/>
       </Switch>
     </Router>
   );
