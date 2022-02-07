@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./routes/Home";
 import Detail from "./routes/Detail";
@@ -7,8 +6,8 @@ function App() {
     <Router>
       <Switch>
         <Route path="/hello"><div>Hello</div></Route>
-        <Route path="/movie/:id" component={Detail}/>4
-        <Route path={`${process.env.PUBLIC_URL}/`} component={Home}/>
+        <Route path="/movie/:id" ><Detail /></Route>
+        <Route path="/"><Home /></Route>
       </Switch>
     </Router>
   );

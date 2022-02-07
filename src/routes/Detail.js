@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
-import { useEffect, useState } from "react/cjs/react.development";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from 'react';
 import Movie from "../components/Movie";
+import loading_style from "./home.module.css";
 
 function Detail(){
     const {id} = useParams();
@@ -19,7 +20,7 @@ function Detail(){
     return (
     <div>
         <h2><Link to="/">home</Link></h2>
-        {loading ? <h1>Loading...</h1>:
+        {loading ? <h1 className={loading_style.loading}>Loading...</h1>:
         <div> 
           <div>
             <Movie id={detail.id} img={detail.medium_cover_image} title={detail.title_long} rating={detail.rating} summary={detail.description_intro} genres={detail.genres} />
